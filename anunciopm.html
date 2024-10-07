@@ -1,0 +1,92 @@
+<!doctype html>
+<html>
+<head>
+    <link href
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Anuncio</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: antiquewhite;
+            height: 90px;
+            box-sizing: border-box;
+        }
+        .container {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            width: 728px;
+            height: 90px;
+        }
+        .logo {
+            height: 50px; /* Adjusted the height of the logo */
+            width: auto;
+            margin-top: 0;
+        }
+        h1 {
+            font-family: "Tac One", sans-serif;
+            color: #282323;
+            font-size: 50px;
+            margin: 0;
+			h2 {
+            font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"
+           color: #283;
+            font-size: 50px;
+            margin: 0;
+        }
+        .btnanuncio {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #FAEBD7;
+            background-color: #282323;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+        .btnanuncio:hover {
+            background-color: #0056b3;
+        }
+        @media (max-width: 480px) {
+            body {
+                height: 250px;
+            }
+            .container {
+                flex-direction: column;
+                width: 300px;
+                height: 250px;
+                text-align: center;
+            }
+            .logo {
+                height: 30px; /* Adjusted the height of the logo for mobile */
+                width: auto;
+            }
+            h1 {
+                font-size: 30px;
+            }
+            .btnanuncio {
+                padding: 10px;
+                font-size: 14px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="http://produccionup.digital/web/talvar3/" target="_blank">
+            <img src="logopm.jpeg" alt="Logo" class="logo">
+        </a>
+        <h1>Puro Mosaico</h1>
+		<h2>Arte en mosaiquismo</h2>
+		
+        <a href="http://produccionup.digital/web/talvar3/" target="_blank" class="btnanuncio">Ver más</a>
+    </div>
+</body>
+</html>

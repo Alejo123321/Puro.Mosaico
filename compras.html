@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puro Mosaico - Compras</title>
+    <link rel="stylesheet" href="contenido.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        /* Estilos generales */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Header */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+            padding: 10px; /* Este valor de padding será el mismo en todas las páginas */
+        }
+
+        .logo a {
+            color: white;
+            text-decoration: none; /* Quitamos el subrayado */
+        }
+
+        .logo h1 {
+            font-size: 1.8rem; /* Tamaño de fuente uniforme */
+            margin-left: 10px; /* Alineación coherente del logo */
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+
+        nav ul li {
+            margin: 0 10px; /* Espaciado uniforme entre los elementos del menú */
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 15px; /* Coherente con el estilo del otro menú */
+        }
+
+        .icono {
+            display: none;
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Estilos para pantallas grandes (menú horizontal) */
+        @media (min-width: 769px) {
+            nav {
+                display: flex;
+            }
+        }
+
+        /* Estilos para pantallas pequeñas (móviles) */
+        @media (max-width: 768px) {
+            .icono {
+                display: block;
+            }
+
+            nav {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                width: 100%;
+                position: absolute;
+                top: 50px;
+                left: 0;
+            }
+
+            nav.show {
+                display: flex;
+            }
+
+            nav ul {
+                flex-direction: column;
+                width: 100%;
+            }
+
+            nav ul li {
+                text-align: center;
+                margin: 10px 0;
+            }
+        }
+
+        /* Estilos de la sección de compras */
+        .compras-header {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .compras-header h1 {
+            font-size: 2.2rem; /* Tamaño ajustado para uniformidad */
+            margin-bottom: 10px;
+        }
+
+        .compras-header h2 {
+            font-size: 1.5rem; /* Tamaño ajustado para subtítulo */
+            margin-bottom: 30px;
+        }
+
+        /* Contenedor de productos */
+        .productos {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            padding: 20px;
+            flex-wrap: wrap;
+        }
+
+        .producto {
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            width: 200px;
+            height: 250px;
+        }
+
+        .producto img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            background-color: #dedede; /* Imagen placeholder */
+            margin-bottom: 15px;
+        }
+
+        /* Responsividad */
+        @media (max-width: 768px) {
+            .productos {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .producto {
+                width: 80%;
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <a href="index.html">
+                <h1>Puro Mosaico</h1>
+            </a>
+        </div>
+        <!-- Ícono del menú de hamburguesa -->
+        <a href="#" class="icono" onClick="toggleMenu()">
+            <i class="fa fa-bars" aria-hidden="true"></i>
+        </a>
+        <!-- Menú de navegación -->
+        <nav id="navegador">
+            <ul>
+                <li><a href="compras.html">Compras</a></li>
+                <li><a href="acercade.html">Acerca de</a></li>
+                <li><a href="preguntasfrecuentes.html">Preguntas Frecuentes</a></li>
+                <li><a href="registrate.html">Regístrate</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Compras -->
+    <section class="compras-header">
+        <h1>COMPRAS</h1>
+        <h2>TIPOS DE PRODUCTOS</h2>
+    </section>
+
+    <!-- Productos -->
+    <section class="productos">
+        <div class="producto">
+            <h3>PORTA ESPIRALES</h3>
+            <img src="porta espiral.jpeg" alt="Porta Espirales">
+        </div>
+        <div class="producto">
+            <h3>TUTORES</h3>
+            <img src="tutores.jpeg" alt="Tutores">
+        </div>
+        <div class="producto">
+            <h3>MACETAS</h3>
+            <img src="foto3.jpeg" alt="Macetas">
+        </div>
+        <div class="producto">
+            <h3>PARA PARED</h3>
+            <img src="colgantes.jpeg" alt="Jardineras">
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Puro Mosaico. Todos los derechos reservados.</p>
+    </footer>
+
+    <script>
+        // Función para alternar el menú de hamburguesa
+        function toggleMenu() {
+            const nav = document.getElementById('navegador');
+            nav.classList.toggle('show');
+        }
+    </script>
+</body>
+</html>
+

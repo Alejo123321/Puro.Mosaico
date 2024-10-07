@@ -1,0 +1,115 @@
+/* Estilos generales */
+body {
+    font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #71FF85;
+    color: greenyellow;
+    padding: ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+	
+	
+}
+
+header .logo h1
+.logo a {
+            color: white;
+            text-decoration: none;
+font-size: 24px;
+    
+
+}
+
+    
+   
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+
+nav ul li a:hover {
+            border: 2px solid white; /* Cuadrado alrededor */
+            border-radius: 5px;      /* Bordes ligeramente redondeados */
+            padding: 8px 13px;     
+	background-color: #28a745;/* Ajustar padding para que el tamaño sea consistente */
+        }
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.icono {
+    display: none;
+    color: white;
+    font-size: 24px;
+}
+
+/* Estilo para la sección de galería */
+.imagen-responsiva {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 10px 0;
+}
+
+footer {
+    background-color: #71FF85;
+    color: white;
+    text-align: center;
+    
+    position: relative;
+}
+
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        width: 100%;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        z-index: 1000; /* Añade un alto valor de z-index */
+    }
+
+    .icono {
+        display: block;
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    nav ul li a {
+        padding: 15px 0;
+        display: block;
+        width: 100%;
+		text-decoration: none
+    }
+}

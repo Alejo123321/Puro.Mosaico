@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anuncio Puro Mosaico</title>
+    <style>
+        /* Estilos para escritorio (728 x 90 px) */
+        .anuncio {
+            width: 728px;
+            height: 90px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            padding: 10px;
+            box-sizing: border-box;
+             font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+        }
+
+        .anuncio img {
+            height: 100%;
+            width: auto;
+            border-radius: 5px;
+        }
+
+        .anuncio h1 {
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .anuncio a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background-color: #71FF85;
+            border-radius: 5px;
+        }
+
+        .anuncio a:hover {
+            background-color: ##28a745;
+        }
+
+        /* Adaptación a móviles (300 x 600 px) */
+        @media (max-width: 768px) {
+            .anuncio {
+                width: 300px;
+                height: 600px;
+                flex-direction: column;
+            }
+
+            .anuncio img {
+                width: 80%;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .anuncio h1 {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
+            }
+
+            .anuncio a {
+                padding: 10px 20px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="anuncio">
+        <img src="logopm.jpeg" alt="Logo Puro Mosaico">
+        <h1>Puro Mosaico</h1>
+        <a href="index.html" target="_blank">Visítanos</a>
+    </div>
+
+</body>
+</html>
