@@ -1,92 +1,82 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="es">
 <head>
-    <link href
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta charset="utf-8">
-    <title>Anuncio</title>
+    <title>Anuncio Puro Mosaico</title>
     <style>
-        body {
-            margin: 0;
-            padding: 0;
-            font-family: 'Poppins', sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background-color: antiquewhite;
+        /* Estilos para escritorio (728 x 90 px) */
+        .anuncio {
+            width: 727px;
             height: 90px;
-            box-sizing: border-box;
-        }
-        .container {
+            background-color: #71FF85;
+            color: white;
+            text-align: center;
             display: flex;
             justify-content: space-around;
             align-items: center;
-            width: 728px;
-            height: 90px;
+            padding: 10px;
+            box-sizing: border-box;
+             font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace;
         }
-        .logo {
-            height: 50px; /* Adjusted the height of the logo */
+
+        .anuncio img {
+            height: 100%;
             width: auto;
-            margin-top: 0;
-        }
-        h1 {
-            font-family: "Tac One", sans-serif;
-            color: #282323;
-            font-size: 50px;
-            margin: 0;
-			h2 {
-            font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, "sans-serif"
-           color: #283;
-            font-size: 50px;
-            margin: 0;
-        }
-        .btnanuncio {
-            display: inline-block;
-            padding: 10px 20px;
-            font-size: 16px;
-            color: #FAEBD7;
-            background-color: #282323;
-            text-align: center;
-            text-decoration: none;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
         }
-        .btnanuncio:hover {
-            background-color: #0056b3;
+
+        .anuncio h1 {
+            font-size: 2.5rem;
+            margin: 0;
         }
-        @media (max-width: 480px) {
-            body {
-                height: 250px;
-            }
-            .container {
-                flex-direction: column;
+
+        .anuncio a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+            background-color: #444444;
+            border-radius: 5px;
+        }
+
+        .anuncio a:hover {
+            background-color: #B1AEAE;
+        }
+
+        /* Adaptación a móviles (300 x 600 px) */
+        @media (max-width: 768px) {
+            .anuncio {
                 width: 300px;
-                height: 250px;
-                text-align: center;
+                height: 600px;
+                flex-direction: column;
             }
-            .logo {
-                height: 30px; /* Adjusted the height of the logo for mobile */
-                width: auto;
+
+            .anuncio img {
+                width: 80%;
+                height: auto;
+                margin-bottom: 20px;
             }
-            h1 {
-                font-size: 30px;
+
+            .anuncio h1 {
+                font-size: 1.2rem;
+                margin-bottom: 20px;
             }
-            .btnanuncio {
-                padding: 10px;
-                font-size: 14px;
+
+            .anuncio a {
+                padding: 10px 20px;
+                font-size: 1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <a href="http://produccionup.digital/web/talvar3/" target="_blank">
-            <img src="logopm.jpeg" alt="Logo" class="logo">
-        </a>
-        <h1>Puro Mosaico</h1>
-		<h2>Arte en mosaiquismo</h2>
-		
-        <a href="http://produccionup.digital/web/talvar3/" target="_blank" class="btnanuncio">Ver más</a>
+
+    <div class="anuncio">
+        <img src="logopm.jpeg" alt="logo">
+      <h1>Puro&nbsp; Mosaico</h1>
+		<h2>¡2x1 en productos&nbsp; &nbsp; &nbsp; &nbsp;seleccionados&nbsp; &nbsp; &nbsp;&nbsp;</h2>
+        <a href="https://alejo123321.github.io/Puro.Mosaico/" target="_blank">CONOCER MAS</a>
     </div>
+
 </body>
 </html>
