@@ -22,8 +22,8 @@
         }
 
         .logo a {
-            text-decoration: none; /* Quitar subrayado */
-            color: white; /* Asegura que el color sea visible */
+            text-decoration: none;
+            color: white;
         }
 
         .logo h1 {
@@ -54,14 +54,12 @@
             cursor: pointer;
         }
 
-        /* Estilos para pantallas grandes (menú horizontal) */
         @media (min-width: 769px) {
             nav {
                 display: flex;
             }
         }
 
-        /* Estilos para pantallas pequeñas (móviles) */
         @media (max-width: 1028px) {
             .icono {
                 display: block;
@@ -92,7 +90,6 @@
             }
         }
 
-        /* Estilos del formulario de registro */
         .registro {
             text-align: center;
             padding: 50px;
@@ -142,7 +139,14 @@
             background-color: #555;
         }
 
-        /* Responsividad */
+        #respuesta {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            font-size: 1.2rem;
+            color: green;
+        }
+
         @media (max-width: 768px) {
             .registro h2 {
                 font-size: 1.5rem;
@@ -155,18 +159,15 @@
     </style>
 </head>
 <body>
-    <!-- Header -->
     <header>
         <div class="logo">
             <a href="index.html">
                 <h1>Puro Mosaico</h1>
             </a>
         </div>
-        <!-- Ícono del menú de hamburguesa -->
         <a href="#" class="icono" onClick="toggleMenu()">
             <i class="fa fa-bars" aria-hidden="true"></i>
         </a>
-        <!-- Menú de navegación -->
         <nav id="navegador">
             <ul>
                 <li><a href="compras.html">Compras</a></li>
@@ -177,22 +178,22 @@
         </nav>
     </header>
 
-    <!-- Sección de Registro -->
     <section class="registro">
         <h2>Regístrate en Puro Mosaico</h2>
-        <form class="formulario-registro" action="procesar-registro.php" method="POST">
+        <form class="formulario-registro" onsubmit="mostrarRespuesta(event)">
             <label for="nombre">Nombre completo:</label>
             <input type="text" id="nombre" name="nombre" required placeholder="Alejo Flores Belaunde">
 
             <label for="email">Correo electrónico:</label>
             <input type="email" id="email" name="email" required placeholder="alejo12@gmail.com">
-			
 
             <label for="password">Contraseña:</label>
             <input type="password" id="password" name="password" required>
 
             <button type="submit">Registrarse</button>
         </form>
+
+        <div id="respuesta">¡Cuenta creada con éxito!</div>
     </section>
 
     <footer>
@@ -200,12 +201,17 @@
     </footer>
 
     <script>
-        // Función para alternar el menú de hamburguesa
         function toggleMenu() {
             const nav = document.getElementById('navegador');
             nav.classList.toggle('show');
         }
+
+        function mostrarRespuesta(event) {
+            event.preventDefault();  // Evita que el formulario se envíe
+            document.getElementById('respuesta').style.display = 'block';  // Muestra el mensaje
+        }
     </script>
 </body>
 </html>
+
 
