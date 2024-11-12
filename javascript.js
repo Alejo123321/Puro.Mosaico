@@ -34,4 +34,15 @@ function moveSlide(step) {
  
 // Initialize slider
 showSlide(slideIndex);
- 
+ function toggleMenu() {
+    const nav = document.getElementById('navegador');
+    nav.classList.toggle('show');
+}
+
+// Cierra el menú al hacer clic en un enlace (solo en dispositivos móviles)
+document.querySelectorAll('nav ul li a').forEach(link => {
+    link.addEventListener('click', function() {
+        const nav = document.getElementById('navegador');
+        nav.classList.remove('show'); // Cierra el menú después de hacer clic
+    });
+});
