@@ -8,19 +8,16 @@ body {
 header {
     background-color: #71FF85;
     color: greenyellow;
-    padding: ;
     display: flex;
     justify-content: space-between;
     align-items: center;
-	
-	
 }
 
-header .logo h1
-.logo a {
-            color: white;
-            text-decoration: none;
-font-size: 24px;
+header .logo h1, .logo a {
+    color: white;
+    text-decoration: none;
+    font-size: 24px;
+}
 
 nav ul {
     list-style-type: none;
@@ -33,13 +30,12 @@ nav ul li {
     margin-left: 20px;
 }
 
-
 nav ul li a:hover {
-            border: 2px solid white; /* Cuadrado alrededor */
-            border-radius: 5px;      /* Bordes ligeramente redondeados */
-            padding: 8px 13px;     
-	background-color: #28a745;/* Ajustar padding para que el tamaño sea consistente */
-        }
+    border: 2px solid white; /* Cuadrado alrededor */
+    border-radius: 5px;      /* Bordes ligeramente redondeados */
+    padding: 8px 13px;
+    background-color: #28a745; /* Ajustar padding para que el tamaño sea consistente */
+}
 
 nav ul li a {
     color: white;
@@ -50,6 +46,7 @@ nav ul li a {
     display: none;
     color: white;
     font-size: 24px;
+    cursor: pointer;
 }
 
 /* Estilo para la sección de galería */
@@ -64,11 +61,24 @@ footer {
     background-color: #71FF85;
     color: white;
     text-align: center;
-    
     position: relative;
-	
-	
-	
+}
+
+.anuncio {
+    width: 728px;
+    height: 90px;
+}
+
+@media (max-width: 727px) {
+    .anuncio {
+        width: 300px;
+        height: 600px;
+    }
+
+    /* Ocultar la barra de navegación en móviles */
+    nav {
+        display: none !important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -88,7 +98,8 @@ footer {
     }
 
     nav.show {
-        display: flex;
+        display: flex !important
+
     }
 
     nav ul {
@@ -106,6 +117,6 @@ footer {
         padding: 15px 0;
         display: block;
         width: 100%;
-		text-decoration: none
+        text-decoration: none;
     }
 }
