@@ -1,0 +1,170 @@
+@charset "utf-8";
+
+/* Estilos generales */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body, html {
+  width: 100%;
+  height: 100%;
+  font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+  overflow: hidden;
+}
+
+/* Contenedor de presentación */
+.presentacion {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* Slider principal */
+.slider {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease;
+  width: 100%;
+  height: 100%;
+}
+
+/* Estilos generales para todas las diapositivas */
+.slide {
+  min-width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Estilos específicos para cada diapositiva */
+.slide1 {
+  background-color: #71FF85;
+  color: #FFFFFF;
+}
+
+.slide2 {
+  background-color: #FF6B6B;
+  color: #FFFFFF;
+}
+
+.slide3 {
+  background-color: #6B8EFF;
+  color: #FFFFFF;
+}
+
+.slide4 {
+  background-color: #FFD36B;
+  color: #333333;
+}
+
+.slide5 {
+  background-color: #FF6BE7;
+  color: #FFFFFF;
+}
+
+.slide6 {
+  background-color: #6BFFDA;
+  color: #333333;
+}
+
+.slide7 {
+  background-color: #FFA86B;
+  color: #FFFFFF;
+}
+
+.slide8 {
+  background-color: #B16BFF;
+  color: #FFFFFF;
+}
+
+.slide9 {
+  background-color: #6BFF95;
+  color: #333333;
+}
+
+.slide10 {
+  background-color: #6B72FF;
+  color: #FFFFFF;
+}
+
+/* Estilos para las imágenes en cada diapositiva */
+.slide img {
+  width: 30%;
+  max-height: 60%;
+  margin-bottom: 20px;
+  border-radius: 10px;
+}
+
+/* Estilos para los títulos de cada diapositiva */
+.slide div {
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* Estilos para los párrafos de cada diapositiva */
+.slide p {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+/* Botones de navegación */
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  cursor: pointer;
+  font-size: 2rem;
+  z-index: 10;
+}
+
+.prev {
+  left: 20px;
+}
+
+.next {
+  right: 20px;
+}
+
+/* Responsivo para móviles */
+@media (max-width: 768px) {
+  .slide {
+    font-size: 1.5rem;
+  }
+
+  .slide p {
+    font-size: 1.2rem;
+  }
+
+  .slide img {
+    width: 40%;
+    max-height: 50%;
+  }
+
+  .nav-button {
+    font-size: 1.5rem;
+    padding: 10px;
+  }
+}
