@@ -1,87 +1,82 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Anuncio Puro Mosaico</title>
+    <meta charset="UTF-8" >
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
+    <link href="https://fonts.googleapis.com" >
+   
     <style>
-        /* Estilos para escritorio (728 x 90 px) */
-        .anuncio {
-            width: 728px;
-            height: 90px;
-            background-color: #333;
-            color: white;
-            text-align: center;
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            padding: 10px;
-            box-sizing: border-box;
-			margin: 0
-				
-				
-             font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
-        }
-
-        .anuncio img {
-            height: 100%;
-            width: auto;
-            border-radius: 5px;
-        }
-
-        .anuncio h1 {
-            font-size: 2.5rem;
+        body {
+            font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
             margin: 0;
         }
+        .contenedor-anuncio h2 {
+            font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", "monospace";
+            font-weight: 800;
+            font-style: normal;
+            color: #2A3039;
+            width: 40%;
+            font-size: 25px;
+            margin: 0;
+            padding: 5px;
+        }
 
-        .anuncio a {
-            color: white;
+        .contenedor-anuncio{
+            display: flex;
+            flex-flow: wrap;
+            align-items: center;
+            background-color: white;
+            justify-content: space-around;
+        }
+        .logo img {
+            height: 80px;
+            margin: 5px;
+        }
+
+        .botonanuncio {
+            display: block;
+            padding: 10px;
+            border-radius: 10px;
+            background: #2A3039;
             text-decoration: none;
-            padding: 8px 16px;
-            background-color: #71FF85;
-            border-radius: 5px;
+            color: white;
         }
 
-        .anuncio a:hover {
-            background-color: ##28a745;
-        }
-
-        /* Adaptación a móviles (300 x 600 px) */
-        @media (max-width: 768px) {
-            .anuncio {
-                width: 300px;
-                height: 600px;
-                flex-direction: column;
+        @media (max-width: 727px) {
+            .contenedor-anuncio {
+                text-align: center;
+                height: 100vh;
+                align-content: center;
             }
-
-            .anuncio img {
-                width: 80%;
-                height: auto;
-                
+            .contenedor-anuncio h2 {
+                font-family: "Poppins", sans-serif;
+                font-weight: 800;
+                font-style: normal;
+                color: #2A3039;
+                width: 100%;
+                font-size: 35px;
+                margin: 0;
+                padding: 20px 10px;
+                box-sizing: border-box;
             }
-
-            .anuncio h1 {
-                font-size: 1.2rem;
-                
+            .logo img {
+                height: 120px;
+                margin: 5px;
             }
-
-            .anuncio a {
-               
-                font-size: 1rem;
-				margin: 0
-					
+            .logo {
+                width: 100%;
             }
         }
     </style>
 </head>
-<body>
 
-    <div class="anuncio">
-        <img src="logopm.jpeg" alt="Logo Puro Mosaico">
-        <h1>Puro Mosaico</h1>
-        <a href="index.html" target="_blank">Visítanos</a>
-		
-    </div>
+<body>
+<div class="contenedor-anuncio">
+  <h2>2x1 en productos seleccionados</h2>
+    <a href="index.html" target="_blank" class="logo"><img src="logopm.jpeg" /></a>
+
+    <a href="index.html" target="_blank" class="botonanuncio">&nbsp;Visitanos&nbsp;</a>
+</div>
 
 </body>
 </html>
