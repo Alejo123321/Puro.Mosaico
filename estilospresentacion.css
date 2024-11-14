@@ -86,14 +86,62 @@ body, html {
 }
 
 .slide7 {
-  background-color: #FFA86B;
-  color: #FFFFFF;
+    background-color: #FFFFFF;
+    color: #000000;
+    text-align: center;
+    padding: 20px;
 }
 
+.slide7 {
+    background-color: #FFFFFF;
+    color: #000000;
+    text-align: center;
+    padding: 50px;
+}
+
+.slide7 h2 {
+    font-size: 36px; /* Aumenta el tamaño del título */
+    margin-bottom: 50px; /* Aumenta la distancia entre el título y las imágenes */
+}
+
+.feature-box {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 60px; /* Aumenta aún más el espacio entre las cajas */
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width: 250px;
+}
+
+.box p {
+    margin: 20px 0; /* Aumenta la distancia entre el texto y la imagen */
+    font-size: 18px;
+}
+
+.box img {
+    width: 300px; /* Aumenta significativamente el tamaño de las imágenes */
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+
+
+/* Modificación de la diapositiva 8 */
 .slide8 {
   background-color: #B16BFF;
   color: #FFFFFF;
 }
+
+
+
+
 
 .slide9 {
   background-color: #6BFF95;
@@ -108,7 +156,7 @@ body, html {
 /* Estilos para las imágenes en cada diapositiva */
 .slide img {
   width: 30%;
-  max-height: 60%;
+  max-height: 80%;
   margin-bottom: 20px;
   border-radius: 10px;
 }
